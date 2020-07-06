@@ -6,7 +6,6 @@ $data = array();
 
 foreach ($products as $datas) {
 	array_push($category, $datas);
-	// break;
 }
 $category = array_unique($category);
 
@@ -14,7 +13,7 @@ $category = array_unique($category);
 foreach ($products as $key => $value) {
 	foreach ($category as $kategori) {
 		if ($value == $kategori) {
-			$data[$kategori][] = [$key];
+			$data[$kategori][] = $key;
 		}
 	}
 }
