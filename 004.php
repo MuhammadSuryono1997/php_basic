@@ -14,9 +14,7 @@ $category = array_unique($category);
 foreach ($products as $key => $value) {
 	foreach ($category as $kategori) {
 		if ($value == $kategori) {
-			$data[] = (object)[
-				$kategori => [$key]
-			];
+			$data[$kategori][] = [$key];
 		}
 	}
 }
